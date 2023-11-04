@@ -83,6 +83,24 @@ def discard():
     """
 
 
+@big_o(time_complexity=Complexity.CONSTANT)
+def intersection():
+    """Returns a new set that includes element that overlap
+    in one or more sets.  Intersection is implemented using
+    the & operator and as usual in the operator case can
+    handle multiple iterables.
+
+    >>> x = {1,2,3,4,5}
+    >>> y = {3,4,5,6,7}
+    >>> x & y & set((3,4,5))
+    {3, 4, 5}
+    >>> x & y & set()
+    set()
+    >>> x.intersection({3})
+    {3}
+    """
+
+
 @big_o(time_complexity=Complexity.LINEAR)
 def symmetric_difference():
     """Unlike `set.difference`.  the symmetric difference
