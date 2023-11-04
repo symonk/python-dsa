@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: [3.11]
+        python-version: ['3.11']
     steps:
       - uses: actions/checkout@v3
       - name: 'Set up Python ${{ matrix.python }}'
@@ -28,7 +28,7 @@ jobs:
           tox --version
           poetry --version
 
-      - name: Test without coverage
+      - name: Test
         run: |
           tox -e py311
       - name: Generate cov report
