@@ -33,8 +33,9 @@ jobs:
           tox -e report_cov
 
       - name: Upload to CodeCov
-        uses: codecov/codecov-action@v2
+        uses: codecov/codecov-action@v3
         with:
-          flags: python_dsa
+          token: ${{ secrets.CODECOV_TOKEN }}
+          flags: unittests
           fail_ci_if_error: true
           verbose: true
