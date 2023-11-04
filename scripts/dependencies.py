@@ -2,7 +2,6 @@
 import argparse
 import subprocess
 import sys
-import typing
 
 
 def build_namespace() -> argparse.Namespace:
@@ -57,7 +56,7 @@ def commit_and_push():
     )
 
 
-def _run_command(command: typing.Tuple[str, ...]) -> int:
+def _run_command(command: tuple[str, ...]) -> int:
     """
     Run a command and return the subprocess exit code.
     :param command: Command to run.
