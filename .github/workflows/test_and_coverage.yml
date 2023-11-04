@@ -1,4 +1,4 @@
-name: asserto testing
+name: python DSA testing
 'on':
   push:
     branches:
