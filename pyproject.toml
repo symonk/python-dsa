@@ -55,3 +55,7 @@ target-version = "py311"
 extend-select = [
     "UP"
 ]
+
+[tool.pytest.ini_options]
+addopts = "--doctest-modules"
+doctest_optionflags = ""
