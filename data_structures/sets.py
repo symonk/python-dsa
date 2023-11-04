@@ -83,7 +83,7 @@ def discard():
     """
 
 
-@big_o(time_complexity=Complexity.CONSTANT)
+@big_o(time_complexity=Complexity.LINEAR)
 def intersection():
     """Returns a new set that includes element that overlap
     in one or more sets.  Intersection is implemented using
