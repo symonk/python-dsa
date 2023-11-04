@@ -68,6 +68,21 @@ def difference():
     """
 
 
+@big_o(time_complexity=Complexity.CONSTANT)
+def discard():
+    """Remove an element from the set if it exists.
+    No exception is raised if the element does not exist.
+    >>> x = {1,2,3}
+    >>> x.discard(4)
+    >>> x
+    {1, 2, 3}
+    >>> x.discard(3)
+    >>> x
+    {1, 2}
+
+    """
+
+
 @big_o(time_complexity=Complexity.LINEAR)
 def symmetric_difference():
     """Unlike `set.difference`.  the symmetric difference
