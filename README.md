@@ -3,3 +3,7 @@
 
 # python-dsa
 :snake: Data structures and Algorithms in python
+
+-----
+
+![Cheatsheet](.github/images/bigO.png)
