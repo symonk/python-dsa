@@ -47,6 +47,18 @@ def clear():
     """
 
 
+@big_o(time_complexity=Complexity.LINEAR)
+def copy():
+    """Creates a shallow copy of the set.
+    >>> x = set((1,2,3))
+    >>> y = x.copy()
+    >>> x == y
+    True
+    >>> x is y
+    False
+    """
+
+
 if __name__ == "__main__":
     import doctest
 
