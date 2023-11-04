@@ -1,5 +1,5 @@
-site_name: Python DSA 
-site_description: Python data structures and algorithms 
+site_name: Python DSA
+site_description: Python data structures and algorithms
 site_url: ""
 theme:
   name: material

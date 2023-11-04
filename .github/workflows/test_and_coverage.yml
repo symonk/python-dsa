@@ -1,0 +1,43 @@
+name: asserto testing
+'on':
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v3
+      - name: 'Set up Python ${{ matrix.python }}'
+        uses: actions/setup-python@v4
+        with:
+          python-version: '${{ matrix.python }}'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install tox
+          python -m pip install poetry
+          pip --version
+          tox --version
+          poetry --version
+
+      - name: Test without coverage
+        run: |
+          tox -e ${{ matrix.tox_env }}
+      - name: Generate cov report
+        run: |
+          tox -e report_cov
+
+      - name: Upload to CodeCov
+        uses: codecov/codecov-action@v2
+        with:
+          flags: python_dsa 
+          fail_ci_if_error: true
+          verbose: true
