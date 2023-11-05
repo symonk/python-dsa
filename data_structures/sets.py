@@ -68,7 +68,7 @@ def difference():
     """
 
 
-@big_o(time_complexity=Complexity.CONSTANT)
+@big_o(time_complexity=Complexity.LINEAR)
 def discard():
     """Remove an element from the set if it exists.
     No exception is raised if the element does not exist.
