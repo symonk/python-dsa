@@ -15,6 +15,15 @@ there are various different ways to get there.
 ... (and so on and so fourth).
 """
 
-def dijkstras() -> None:
-  """The algorithm implementation."""
-  ...
+
+class Node:
+    """Encapsulation of a Node"""
+
+    def __init__(self) -> None:
+        self.distance = float("inf")
+        self.parent = None
+        self.finished = False
+
+
+def dijkstras(graph: dict[str, dict[str, int]], source: str) -> None:
+    ...
