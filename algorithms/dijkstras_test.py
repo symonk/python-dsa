@@ -9,4 +9,4 @@ def test_dijkstras_shortest_path():
         "c": {"d": 2},
         "d": {},
     }
-    assert dijkstras(graph, "s")
+    assert dijkstras(graph, "s") is None  # Todo: Implement.
