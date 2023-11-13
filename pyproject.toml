@@ -16,7 +16,7 @@ coverage = "^7.3.2"
 mkdocs-material = "^9.4.8"
 mkdocstrings = "^0.23.0"
 mkdocstrings-python = "^1.7.3"
-pytest-xdist = "^3.3.1"
+pytest-xdist = "^3.4.0"
 
 [build-system]
 requires = ["poetry-core"]
