@@ -134,6 +134,12 @@ def copy():
     False
     """
 
+@big_o(time_complexity=Complexity.LINEAR)
+def isdisjoint() -> bool:
+   """Returns if a set containers any other elements in another.
+   if isdisjoint() is True, the intersection of those sets is also
+   an empty set."""
+
 
 if __name__ == "__main__":
     import doctest
