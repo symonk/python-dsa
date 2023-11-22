@@ -77,6 +77,24 @@ def counter_elements() -> None:
     """
 
 
+def most_common() -> None:
+    """Retrieving a list of tuples for the most common `n` elements
+    in the counter.  If counter elements are equal, the returned
+    tuples are based on insertion order, this is why in the first example
+    even tho `o` and `d` are both 2, `d` is returned as it was encountered
+    first.
+
+    If `n` is `None`, all items are returned in order.
+
+    >>> from collections import Counter
+    >>> c = Counter("yabbadabbadoo")
+    >>> c.most_common(3)
+    [('a', 4), ('b', 4), ('d', 2)]
+    >>> c.most_common()
+    [('a', 4), ('b', 4), ('d', 2), ('o', 2), ('y', 1)]
+    """
+
+
 if __name__ == "__main__":
     import doctest
 
