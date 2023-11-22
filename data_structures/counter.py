@@ -4,18 +4,16 @@ any integer value including zero, or negative counts.
 """
 
 
-def initialize_counter_from_iterable() -> None:
+def initializing_counter() -> None:
     """Counters can be initialized from an iterable.
 
+    >>> from collections import Counter
     >>> t = ('a', 'b', 'c', 'c')
-    >>> Counter(t)
-    Counter(1)
-
+    >>> c1 = Counter(t)
+    >>> c2 = Counter({'a': 1, 'b': 1, 'c': 2})
+    >>> c1 == c2
+    True
     """
-
-
-def initialize_counter_from_mapping() -> None:
-    ...
 
 
 if __name__ == "__main__":

@@ -23,11 +23,8 @@ Methods:
 
 Documentation: https://docs.python.org/3/library/stdtypes.html#set-types-set-frozenset
 """
-from deco import big_o
-from const import Complexity
 
 
-@big_o(time_complexity=Complexity.CONSTANT)
 def add():
     """Adds a unique, hashable element into the set.
     >>> x = set()
@@ -37,7 +34,6 @@ def add():
     """
 
 
-@big_o(time_complexity=Complexity.CONSTANT)
 def clear():
     """Remove all elements from the set.
     >>> x = set([1,2,3,4,5])
@@ -47,7 +43,6 @@ def clear():
     """
 
 
-@big_o(time_complexity=Complexity.LINEAR)
 def difference():
     """Return the difference of one more sets.  Difference
     refers to elements in the initial set, minus those in the others.
@@ -68,7 +63,6 @@ def difference():
     """
 
 
-@big_o(time_complexity=Complexity.LINEAR)
 def discard():
     """Remove an element from the set if it exists.
     No exception is raised if the element does not exist.
@@ -83,7 +77,6 @@ def discard():
     """
 
 
-@big_o(time_complexity=Complexity.LINEAR)
 def intersection():
     """Returns a new set that includes element that overlap
     in one or more sets.  Intersection is implemented using
@@ -101,7 +94,6 @@ def intersection():
     """
 
 
-@big_o(time_complexity=Complexity.LINEAR)
 def symmetric_difference():
     """Unlike `set.difference`.  the symmetric difference
     of one more sets is the elements which exist in ANY
@@ -123,7 +115,6 @@ def symmetric_difference():
     """
 
 
-@big_o(time_complexity=Complexity.LINEAR)
 def copy():
     """Creates a shallow copy of the set.
     >>> x = set((1,2,3))
