@@ -16,6 +16,16 @@ def initializing_counter() -> None:
     """
 
 
+def additional_initialization() -> None:
+    """
+    >>> from collections import Counter
+    >>> c1 = Counter("foobar")
+    >>> c2 = Counter(f=1, o=2, b=1, a=1, r=1)
+    >>> c1 == c2
+    True
+    """
+
+
 if __name__ == "__main__":
     import doctest
 
