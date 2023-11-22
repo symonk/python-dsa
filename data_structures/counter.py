@@ -26,6 +26,23 @@ def additional_initialization() -> None:
     """
 
 
+def counter_missing_items() -> None:
+    """When a normal dictionary would raise a `KeyError`, a Counter
+    instead returns zero.
+
+    >>> from collections import Counter
+    >>> d = dict()
+    >>> d['foo']
+    Traceback (most recent call last):
+        ...
+    KeyError: 'foo'
+    >>> c = Counter()
+    >>> c['foo']
+    0
+
+    """
+
+
 if __name__ == "__main__":
     import doctest
 
