@@ -8,4 +8,5 @@ def test_fixed_size_sliding_window() -> None:
 
 
 def test_dynamic_size_sliding_window() -> None:
-    _ = dynamically_sized_sliding_window(seq=[1, 2])
+    # obar
+    assert dynamically_sized_sliding_window(s="foobarra") == 4
