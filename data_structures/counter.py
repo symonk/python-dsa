@@ -56,6 +56,27 @@ def deleting_from_counter() -> None:
     """
 
 
+def counter_elements() -> None:
+    """Retrieving an iterator over elements, repeating each for the number of it's
+    count can be fetched via `counter.elements()`.
+
+    If elements counts are less than 1, they are ignored by .elements()
+
+    >>> from collections import Counter
+    >>> c = Counter("foo")
+    >>> for element in c.elements():
+    ...     print(element)
+    f
+    o
+    o
+    >>> c = Counter("foo")
+    >>> c["o"] = 0
+    >>> for element in c.elements():
+    ...     print(element)
+    f
+    """
+
+
 if __name__ == "__main__":
     import doctest
 
