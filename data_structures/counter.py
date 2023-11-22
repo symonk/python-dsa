@@ -120,6 +120,17 @@ def total() -> None:
     """
 
 
+def fromkeys() -> None:
+    """The usual `fromkeys` method of dictionaries is not implemented
+    for `Counter` objects.
+    >>> from collections import Counter
+    >>> c = Counter.fromkeys((1,2,3), 100)
+    Traceback (most recent call last):
+        ...
+    NotImplementedError: Counter.fromkeys() is undefined.  Use Counter(iterable) instead.
+    """
+
+
 if __name__ == "__main__":
     import doctest
 
