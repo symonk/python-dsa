@@ -131,6 +131,19 @@ def fromkeys() -> None:
     """
 
 
+def update() -> None:
+    """Update the counter from an iterable or mapping.  The iterable should just
+    be a sequence of elements and rather than replace elements, their counts are
+    added.
+
+    >>> from collections import Counter
+    >>> c = Counter((1,2,3))
+    >>> c.update((3,4,5))
+    >>> c == Counter((1, 2, 3, 3, 4, 5))
+    True
+    """
+
+
 if __name__ == "__main__":
     import doctest
 
