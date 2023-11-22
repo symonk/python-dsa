@@ -7,7 +7,7 @@ we typically perform an operation each iteration.
 import typing
 
 
-def static_sliding_window(seq: typing.Sequence[int], k: int) -> float:
+def fixed_sized_sliding_window(seq: typing.Sequence[int], k: int) -> float:
     """You are given an integer array nums consisting of n elements, and an integer k.
     Find a contiguous subarray whose length is equal to k that has the maximum average value and return this value."""
     window = seq[0:k]
@@ -23,6 +23,8 @@ def static_sliding_window(seq: typing.Sequence[int], k: int) -> float:
     return max_avg
 
 
-def dynamic_sliding_window(seq: typing.Sequence[int]) -> bool:
-    """A slightly more complex variation of the sliding window."""
+def dynamically_sized_sliding_window(seq: typing.Sequence[int]) -> bool:
+    """Finding all subarrays that meet a particular criteria, where
+    the fixed size of the subarray is unknown."""
+
     return False
