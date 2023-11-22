@@ -111,6 +111,15 @@ def subtract() -> None:
     """
 
 
+def total() -> None:
+    """Returns the total sum of all counts.
+    >>> from collections import Counter
+    >>> c = Counter([0] * 100)
+    >>> c.total() == 100
+    True
+    """
+
+
 if __name__ == "__main__":
     import doctest
 
