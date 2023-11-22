@@ -95,6 +95,22 @@ def most_common() -> None:
     """
 
 
+def subtract() -> None:
+    """Subtract the counts in another iterable or mapping from
+    the counter.
+    >>> from collections import Counter
+    >>> c = Counter("foobar")
+    >>> t = ("ooa")
+    >>> c.subtract(t)
+    >>> c == Counter("fbr")
+    True
+    >>> c = Counter("10101010")
+    >>> c.subtract({"1": 5, "0": 10})
+    >>> c
+    Counter({'1': -1, '0': -6})
+    """
+
+
 if __name__ == "__main__":
     import doctest
 
