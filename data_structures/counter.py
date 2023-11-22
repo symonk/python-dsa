@@ -39,7 +39,20 @@ def counter_missing_items() -> None:
     >>> c = Counter()
     >>> c['foo']
     0
+    """
 
+
+def deleting_from_counter() -> None:
+    """Setting a value to 0 in a counter, does not remove it.
+    Instead use the builtin `del`.
+    >>> from collections import Counter
+    >>> c = Counter("foo")
+    >>> c["o"] = 0
+    >>> c
+    Counter({'f': 1, 'o': 0})
+    >>> del c["o"]
+    >>> c
+    Counter({'f': 1})
     """
 
 
