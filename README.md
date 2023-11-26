@@ -103,6 +103,29 @@ for n in input:
 
 -----
 
-...
+In an `exponential` algorithm, the runtime of the algorithm often doubles (or more) for a
+single increase in the input data.  This is usually common in brute force style algorithms.
 
 -----
+
+```python
+# Note: This can be sped up substancially by caching calls.
+def fibonacci(n: int):
+    if n <= 1:
+        return n
+    return fibonacci(n-1) + fibonacci(n-2)
+```
+
+A boost im performance can be had here via:
+
+```python
+from functools import lru_cache
+
+@lru_cache
+def fibonacci(n: int):
+    if n <= 1:
+        return n
+    return fibonacci(n-1) + fibonacci(n-2)
+```
+
+This avoids recalculating workloads for the same integers.
