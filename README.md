@@ -61,7 +61,7 @@ def search_phone_book(book: list[string], name: string) -> int:
         if choice == name:
             return middle
         # rely on default string sorting.
-        if choice > name:
+        if choice < name:
             left = middle + 1
         else:
             right = middle -1
