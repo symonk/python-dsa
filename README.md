@@ -44,7 +44,37 @@ for n in numbers:
 
 -----
 
-...
+Logarithmic time/space complexity typically halves the input on each iteration.  A good
+example is finding the phone number of someone in a phone book, the optimal solution
+would be to keep cutting the book in half, throwing the half away that the name does
+not exist in. Typically solutions that can work in O(log n) time are sorted already.
+
+```python
+def search_phone_book(book: list[string], name: string) -> int:
+    """Find a person in a phone book, return their index.
+    Returns -1 if the person does not exist."""
+    
+    left, right = 0, len(phone_book)-1
+    while left <= right:
+        middle = (left + right) // 2
+        choice = book[middle]
+        if choice == name:
+            return middle
+        # rely on default string sorting.
+        if choice > name:
+            left = middle + 1
+        else:
+            right = middle -1
+    return -1
+
+
+phone_book = ["Alistar", "Bert", "Christopher", "Diane", "Ezmerelda"]
+assert search_phone_book(phone_book, "Diane") == 3
+assert search_phone_book(phone_book, "Robert") == -1
+
+```
+The above algorithm is known as `divide and conquer` and is extremely performant
+as data sizes scale.
 
 -----
 
