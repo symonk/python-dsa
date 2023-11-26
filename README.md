@@ -28,8 +28,15 @@ assert x[0] == 1
 # Linear Complexity [O(n)]
 
 -----
+Linear complexity is when the time/space of the algorithm grows in line with the size 
+of the input, for example: A bigger array takes longer than a smaller one to traverse.
 
-...
+```python
+numbers = list(range(10_000))
+for n in numbers:
+    # We have to iterate every element in numbers; O(n) depending on numbers size.
+    _ = n * 2
+```
 
 -----
 
