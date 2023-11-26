@@ -42,6 +42,7 @@ def clear():
     set()
     """
 
+
 def copy():
     """Creates a shallow copy of the set.
     >>> x = set((1,2,3))
@@ -51,6 +52,7 @@ def copy():
     >>> x is y
     False
     """
+
 
 def difference():
     """Return the difference of one more sets.  Difference
@@ -102,26 +104,34 @@ def intersection():
     {3}
     """
 
+
 def isdisjoint():
     ...
+
 
 def issubset():
     ...
 
+
 def issuperset():
     ...
+
 
 def pop():
     ...
 
+
 def remove():
     ...
+
 
 def union():
     ...
 
+
 def update():
     ...
+
 
 def symmetric_difference():
     """Unlike `set.difference`.  the symmetric difference
@@ -142,8 +152,6 @@ def symmetric_difference():
     >>> x ^ set((99, 88, 77))
     set()
     """
-
-
 
 
 if __name__ == "__main__":

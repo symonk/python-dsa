@@ -1,7 +1,7 @@
 [![codecov](https://codecov.io/gh/symonk/python-dsa/branch/main/graph/badge.svg)](https://codecov.io/gh/symonk/python-dsa)
 [![docs](https://img.shields.io/badge/documentation-online-brightgreen.svg)](https://symonk.github.io/python-dsa/)
 
-# python-dsa
+## python-dsa
 :snake: Data structures and Algorithms in python
 
 -----
@@ -11,7 +11,7 @@
 
 -----
 
-# Constant Complexity [O(1)]
+### Constant Complexity [O(1)]
 
 -----
 
@@ -25,10 +25,10 @@ assert x[0] == 1
 
 -----
 
-# Linear Complexity [O(n)]
+### Linear Complexity [O(n)]
 
 -----
-Linear complexity is when the time/space of the algorithm grows in line with the size 
+Linear complexity is when the time/space of the algorithm grows in line with the size
 of the input, for example: A bigger array takes longer than a smaller one to traverse.
 
 ```python
@@ -40,7 +40,7 @@ for n in numbers:
 
 -----
 
-# Logarithmic Time [O(log n)]
+### Logarithmic Time [O(log n)]
 
 -----
 
@@ -53,7 +53,7 @@ not exist in. Typically solutions that can work in O(log n) time are sorted alre
 def search_phone_book(book: list[string], name: string) -> int:
     """Find a person in a phone book, return their index.
     Returns -1 if the person does not exist."""
-    
+
     left, right = 0, len(phone_book)-1
     while left <= right:
         middle = (left + right) // 2
@@ -78,15 +78,28 @@ as data sizes scale.
 
 -----
 
-# Polynomial Time [O(n²)]
+### Polynomial Time [O(n²)]
 
 -----
 
-...
+`Polynomial` time typically involves iterating through an input multiple times, depending on how many
+`nested` iterations, describes the `exponent`.
+
+```python
+input = (1,2,3,4,5,6)
+for n in input:
+    print("O(n)")
+    for i in input:
+            print("O(n²)")
+        for j in input:
+                print("O(n³)")
+            for y in input:
+                print("O(n⁴)")
+```
 
 -----
 
-# Exponential Time [O(n^²)]
+### Exponential Time [O(n^²)]
 
 -----
 

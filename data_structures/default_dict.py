@@ -13,12 +13,14 @@ def default_dict() -> None:
     >>> d[1]
     100
     >>> d[2]
-    200
+    100
     >>> d[2] += 1000
     >>> d[2]
     1100
     """
 
+
 if __name__ == "__main__":
     import doctest
+
     doctest.testmod()
