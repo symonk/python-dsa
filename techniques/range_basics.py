@@ -6,7 +6,7 @@ per iteration value it yields.
 """
 
 
-def basic_range(start_inclusive: int, end_exclusive: int) -> list[int]:
+def basic_range(start_inclusive: int, end_exclusive: int, step: int = 1) -> list[int]:
     """For consistency with slicing, the range builtin
     returns the start (inclusive) and ends on end-1."""
-    return list(range(start_inclusive, end_exclusive))
+    return list(range(start_inclusive, end_exclusive, step))
