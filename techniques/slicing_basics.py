@@ -1,10 +1,11 @@
 # Understanding slicing specifics and range() semantics is vital for
 # improving at competitive programming/DSA style puzzles.
 
+
 def slicing():
-    x = [1,2,3,4,5]
+    x = [1, 2, 3, 4, 5]
     simple_slice = slice(0, 2)
-    assert x[simple_slice] == [1,2,3]
+    assert x[simple_slice] == [1, 2, 3]
 
 
 def ranging():

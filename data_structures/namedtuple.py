@@ -11,18 +11,20 @@ hashable.
 from collections import namedtuple
 from typing import NamedTuple
 
+
 def main() -> int:
-    record = namedtuple("Record", "name age score")
+    record = namedtuple("record", "name age score")
 
     class Record2(NamedTuple):
         """Largely equivalent to record"""
+
         name: str
         age: int
         score: int
 
-    t1 = record("john", 18, 100)
-    t2 = Record2("doe", 30, 75)
-
+    t1 = record("john", 18, 100)  # noqa: F841
+    t2 = Record2("doe", 30, 75)  # noqa: F841
+    return 0
 
 
 if __name__ == "__main__":
