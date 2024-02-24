@@ -10,7 +10,7 @@ import typing
 def fixed_sized_sliding_window(seq: typing.Sequence[int], k: int) -> float:
     """You are given an integer array nums consisting of n elements, and an integer k.
     Find a contiguous subarray whose length is equal to k that has the maximum average value and return this value."""
-    window = seq[0:k]
+    window = seq[:k]
     curr = sum(window)
     max_avg = curr / k
     p0 = 1
